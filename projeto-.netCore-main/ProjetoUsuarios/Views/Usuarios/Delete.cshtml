@@ -1,0 +1,89 @@
+﻿@model ProjetoUsuarios.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Delete</h1>
+
+<div>
+    <h4>Tem certeza que quer deletar esse Usuário?</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+        <hr />
+        <dt>Endereço</dt>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Bairro)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Bairro)
+        </dd>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Numero)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Numero)
+        </dd>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Cidade)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Cidade)
+        </dd>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Estado)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Estado)
+        </dd>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.Logradouro)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.Logradouro)
+        </dd>
+        <dd class= "col-sm-2">
+            @Html.DisplayNameFor(model => model.Endereco.CEP)
+        </dd>
+        <dd class= "col-sm-10">
+            @Html.DisplayFor(model => model.Endereco.CEP)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UsuarioId" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>
